@@ -8,27 +8,31 @@ class ColumnView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Column View"),
+        backgroundColor: const Color.fromARGB(255, 113, 108, 89),
         centerTitle: true,
       ),
       body: Container(
-        color: Colors.blueAccent,
+        color: const Color.fromARGB(255, 55, 77, 115),
         padding: const EdgeInsets.all(16.0),
-        child: const Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Icon(
-              Icons.star,
-              size: 30,
-            ),
-            Icon(
-              Icons.star,
-              size: 30,
-            ),
-            Icon(
-              Icons.star,
-              size: 30,
-            ),
-          ],
+        child: const Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Icon(
+                Icons.star,
+                size: 100,
+              ),
+              Icon(
+                Icons.star,
+                size: 100,
+              ),
+              Spacer(),
+              Icon(
+                Icons.star,
+                size: 100,
+              ),
+            ],
+          ),
         ),
       ),
     );
