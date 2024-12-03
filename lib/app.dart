@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:new_project/view/arithemetic_view.dart';
-import 'package:new_project/view/column_view.dart';
-import 'package:new_project/view/rich_text_view.dart';
+import 'package:new_project/week4/load_image_view.dart';
+
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -11,7 +10,7 @@ class App extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "new project",
-      home: ColumnView(),
+      home: LoadImageView(),
     );
   }
 }
