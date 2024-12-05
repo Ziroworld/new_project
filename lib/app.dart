@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:new_project/view/list_view.dart';
 import 'package:new_project/week4/classwork_view.dart';
 import 'package:new_project/week4/flexible_expanded_view.dart';
 import 'package:new_project/week4/load_image_view.dart';
@@ -13,7 +14,7 @@ class App extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "new project",
-      home: ClassworkView(),
+      home: StudentDetailsView(),
     );
   }
 }
