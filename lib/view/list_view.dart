@@ -1,31 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:new_project/view/student_details_view.dart';
+import 'package:new_project/model/student_model.dart';
 
-class Student {
-  final String fname;
-  final String lname;
-  final String city;
+// class Student {
+//   final String fname;
+//   final String lname;
+//   final String city;
 
-  Student({required this.fname, required this.lname, required this.city});
-}
-
-void main() {
-  runApp(const StudentApp());
-}
-
-class StudentApp extends StatelessWidget {
-  const StudentApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Student List App',
-      home: StudentDetailsView(),
-    );
-  }
-}
+//   Student({required this.fname, required this.lname, required this.city});
+// }
 
 class StudentDetailsView extends StatefulWidget {
-  const StudentDetailsView({super.key});
+  final Student student; // Add this to accept the Student object.
+
+  const StudentDetailsView(
+      {super.key, required this.student}); // Make student a required parameter.
 
   @override
   State<StudentDetailsView> createState() => _StudentDetailsViewState();
@@ -127,6 +116,15 @@ class _StudentDetailsViewState extends State<StudentDetailsView> {
                         return ListTile(
                           title: Text('${student.fname} ${student.lname}'),
                           subtitle: Text(student.city),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    StudentDetailsView(student: student),
+                              ),
+                            );
+                          },
                         );
                       },
                     ),
