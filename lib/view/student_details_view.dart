@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_project/model/student_model.dart';
-import 'package:new_project/view/list_view.dart';
+// import 'package:new_project/view/list_view.dart';
 
 class StudentDetailsView extends StatelessWidget {
   final Student student; // Add this property to hold the student data.

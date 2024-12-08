@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:new_project/view/student_details_view.dart';
+// import 'package:new_project/view/student_details_view.dart';
 import 'package:new_project/model/student_model.dart';
 
 // class Student {
@@ -11,7 +11,7 @@ import 'package:new_project/model/student_model.dart';
 // }
 
 class StudentDetailsView extends StatefulWidget {
-  final Student student; // Add this to accept the Student object.
+  final Student student; // Add this to accept the Stusdent object.
 
   const StudentDetailsView(
       {super.key, required this.student}); // Make student a required parameter.
